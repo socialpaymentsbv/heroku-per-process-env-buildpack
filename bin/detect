@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+echo "per-process-env" && exit 0
