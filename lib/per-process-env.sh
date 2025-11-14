@@ -1,14 +1,9 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
-
-echo "DYNO=${DYNO:-}"
-
 if [[ ${DYNO:-} =~ ^([A-Za-z0-9_-]+)\.([0-9]+)$ ]]; then
   DYNO_TYPE="${BASH_REMATCH[1]}"
   DYNO_INDEX="${BASH_REMATCH[2]}"
 else
-  echo "DYNO format invalid or missing, skipping per-process env setup"
   return 0 2>/dev/null || exit 0
 fi
 
