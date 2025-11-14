@@ -14,4 +14,4 @@ mkdir -p "$PROFILE_DIR"
 cp "$BP_DIR/lib/per-process-env.sh" "$PROFILE_DIR/$RUNTIME_SCRIPT"
 chmod +x "$PROFILE_DIR/$RUNTIME_SCRIPT"
 
-printf "-----> Installed per-process env script to .profile.d\n"
+echo "-----> Installed per-process env script to .profile.d"
